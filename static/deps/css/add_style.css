@@ -1,0 +1,74 @@
+form{
+	margin: 0;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	min-width: 30%;
+	max-width: fit-content;
+}
+
+fieldset{
+	min-width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+legend{
+	min-width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 2vh;
+}
+
+input, button, textarea{
+	border: none;
+	border-radius: 1vw;
+	padding: 1vh 1vh;
+}
+
+#container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 100%;
+	padding: 0 1vw 0 0;
+}
+
+#box{
+	text-align: start;
+	font-size: 1rem;
+}
+
+input[type="text"]{
+	box-shadow: 0 0 .5vh .5vh green;
+	min-width: 100%;
+	min-height: fit-content;
+	margin-bottom: 2vh;
+}
+
+input[type="number"]{
+	box-shadow: 0 0 .5vh .5vh green;
+}
+
+textarea{
+	box-shadow: 0 0 .5vh .5vh green;
+	min-width: 100%;
+	margin-bottom: 2vh;
+}
+
+button{
+	background-color: #333;
+	color: white;
+	font-size: 1.1rem;
+	padding: 1.5vh 1.4vh;
+}
+
+button:hover{
+	color: gold;
+	background-color: #222;
+}

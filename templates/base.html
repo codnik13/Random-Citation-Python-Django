@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "deps/css/bootstrap/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "deps/css/common_style.css" %}">
+	{% block css %}{% endblock css %}
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="{% static "deps/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "deps/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "deps/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "deps/favicon/site.webmanifest" %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+	<nav>
+		<a href="{% url "main:index" %}">На главную</a>
+		<a href="{% url "main:popular" %}">Популярные цитаты</a>
+		<a href="{% url "main:add" %}">Добавить цитату</a>
+	</nav>
+	{% block content %}{% endblock content %}
+	{% block opinion %}{% endblock opinion %}
+</body>
+</html>

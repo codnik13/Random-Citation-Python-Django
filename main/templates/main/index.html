@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "deps/css/main_style.css" %}">
+{% endblock css %}
+
+{% block content %}
+	<div class="container">
+		{% if isEmpty %}
+			<div style="text-align: center;">Нет записей</div>
+		{% else %} 
+		<div class="text">
+			<p><i>{{ citation.text }}</i></p>
+			<p class="title">{{ citation.source }}</p>
+		</div>
+		<div class="addons">
+			<div>
+				<img class="icon-size" src="{% static "deps/icons/eye_icon.png" %}" alt="eye icon"/>
+				<span> {{ citation.views }}</span>
+			</div>
+			<div>
+				{% if activeLike %}
+					<img class="icon-size active" src="{% static "deps/icons/like_icon.png" %}" alt="like icon"/>
+				{% else %}
+					<img onclick='window.location.href="{% url 'main:rank' opinion=1 citation_pk=citation.pk %}"' class="icon-size inactive" 
+					src="{% static "deps/icons/like_icon.png" %}" alt="like icon"/>
+				{% endif %}
+				<span> {{ citation.likes }}</span>
+			</div>
+			<div>
+				{% if activeDislike %}
+					<img class="icon-size active rotate" src="{% static "deps/icons/like_icon.png" %}" alt="dislike icon"/>
+				{% else %}
+					<img onclick='window.location.href="{% url 'main:rank' opinion=2 citation_pk=citation.pk %}"' class="icon-size inactive rotate" 
+					src="{% static "deps/icons/like_icon.png" %}" alt="dislike icon"/>
+				{% endif %}
+				<span> {{ citation.dislikes }}</span>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+{% endblock content %}

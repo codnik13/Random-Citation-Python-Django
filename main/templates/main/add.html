@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "deps/css/add_style.css" %}">
+{% endblock css %}
+
+{% block content %}
+	<form method="post" action="{% url 'main:add' %}">
+		{% if alert %}<script> alert("{{ alert }}") </script>{% endif %}
+		{% csrf_token %}
+		<fieldset>
+			<legend>Заполните форму</legend>
+			<input type="text" name="source" placeholder="источник" required/>
+			<textarea name="text" rows="7" placeholder="Текст цитаты" required></textarea>
+			<span id="container">
+				<span id="box"><b>Вес цитаты</b>&nbsp&nbsp<input type="number" name="weight" max="10" min="1" value="1"/></span>
+				<button type="submit" onclick="reset();">Добавить</button>
+			</span>
+			<input id="reset" type="reset" style="display: none"/>
+		</fieldset>
+	</form>
+	<script>
+		function reset(){
+			document.getElementById('reset').click();
+		}
+	</script>
+{% endblock content %}
+
+

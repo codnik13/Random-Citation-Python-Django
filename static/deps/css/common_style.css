@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(circle, white 10%, palegreen 80%);
+}
+
+nav{
+	display: inline-block;
+	width: 100%;
+	height: fit-content;
+	margin-top: 1vh;
+	padding: 2vh 0;
+	background-color: #333;
+}
+
+nav a{
+	width: fit-content;
+	height: 100%;
+	padding: 2vh 1vw;
+	text-decoration: none;
+	color: white;
+	font-size: 1.1rem;
+}
+
+nav a:hover{
+	color: gold;
+	background-color: #222;
+}

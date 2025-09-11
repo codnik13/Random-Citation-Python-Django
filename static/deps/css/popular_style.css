@@ -1,0 +1,42 @@
+.general{
+	width: 88vw;
+	display: grid;
+	row-gap: 4vh;
+	column-gap: 2vw;
+	height: 68vh;
+	grid-template-columns: 16vw 16vw 16vw 16vw 16vw;
+	grid-template-rows: 32vh 32vh;
+	margin: 12vh auto auto auto;
+}
+
+.box{
+	background-color: white;
+	border-radius: 1vw;
+	padding: 2vh 1.2vh;
+	box-shadow: 0 0 .5vh .5vh green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-decoration: none;
+	color: black;
+}
+
+.text{
+	width: 100%;
+	height: fit-content;
+	text-align: end;
+}
+
+.addons{
+	width: fit-content;
+	text-align: start;
+}
+
+.addons span{
+	margin-right: 1.2vw;
+}
+
+.icon-size{
+	width: 1.5vw;
+	height: auto;
+}

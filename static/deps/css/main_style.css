@@ -1,0 +1,58 @@
+.container{
+	background-color: white;
+	border-radius: 1vw;
+	padding: 2vh 1.2vh;
+	max-height: fit-content;
+	max-width: fit-content;
+	min-height: fit-content;
+	min-width: 30%;
+	margin: 0;
+	box-shadow: 0 0 1vh 1vh green;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.text{
+	width: 100%;
+	height: fit-content;
+	text-align: end;
+}
+
+.addons{
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+}
+
+.addons span{
+	margin-right: 1.2vw;
+}
+
+.active{
+	scale: 1;
+}
+
+.inactive{
+	scale: .9;
+}
+
+.inactive:hover{
+	scale: 1.1;
+}
+
+.inactive:active{
+	scale: 1.4;
+}
+
+.icon-size{
+	width: 1.5vw;
+	height: auto;
+}
+
+.rotate{
+	transform: rotate(180deg);
+}

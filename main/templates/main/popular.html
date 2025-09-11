@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "deps/css/popular_style.css" %}">
+{% endblock css %}
+
+{% block content %} 
+	<div class="general">
+		{% for citation in citations %}
+		<a class="box" href="{% url 'main:choice' citation.pk %}">
+		<div class="text">
+			<p><i>{{ citation.text|truncatewords:25 }}</i></p>
+			<p class="title">{{ citation.source }}</p>
+		</div>
+		<div class="addons">
+			<img class="icon-size inactive" src="{% static "deps/icons/like_icon.png" %}" alt="like icon"/>
+			<span> {{ citation.likes }}</span>
+		</div>
+		</a>
+		{% endfor %}
+	</div>
+{% endblock content %}
